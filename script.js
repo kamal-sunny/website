@@ -2,7 +2,8 @@ document.getElementById("myForm").addEventListener("submit", function(e) {
     e.preventDefault();
     const name = document.getElementById("name").value;
 
-    fetch("http://127.0.0.1:5000/submit", {
+    // ✅ Use relative path instead of localhost
+    fetch("/submit", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
